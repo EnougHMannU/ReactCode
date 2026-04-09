@@ -18,13 +18,13 @@ export default function Cmodal(props){
                                         <label>NAME</label><input type="text" value={props.name1} onChange={(e)=>props.setName1(e.target.value)} placeholder='name here'></input>
                                     </div>
                                     <div>
-                                        <label>EMAIL</label><input type="email" value={props.email1} onChange={(e)=>props.setEmail1(e.target.value)} placeholder='email here'></input>
+                                        <label>AGE</label><input type="text" value={props.age1} onChange={(e)=>props.setAge1(e.target.value)} placeholder='age here'></input>
                                     </div>
                                     <div>
-                                        <label>COURSE</label><input type="text" value={props.course1} onChange={(e)=>props.setCourse1(e.target.value)} placeholder='course here'></input>
+                                        <label>ADDRESS</label><input type="text" value={props.address1} onChange={(e)=>props.setAddress1(e.target.value)} placeholder='address here'></input>
                                     </div>
                                     <div>
-                                        <label>STATUS</label><input type="text" value={props.status1} onChange={(e)=>props.setStatus1(e.target.value)} placeholder='status here'></input>
+                                        <label>ROLLNO</label><input type="text" value={props.rollno1} onChange={(e)=>props.setRollno1(e.target.value)} placeholder='rollno here'></input>
                                     </div>
                                 </Modal.Body>
                                 <Modal.Footer>

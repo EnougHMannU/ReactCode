@@ -8,9 +8,9 @@ export default function Ctable(props) {
                                 <tr>
                                     <th>ID.</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Course</th>
-                                    <th>Status</th>
+                                    <th>Age</th>
+                                    <th>Address</th>
+                                    <th>Roll no</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -21,9 +21,9 @@ export default function Ctable(props) {
                                 <tr key={studentlist.id}>
                                     <td>{studentlist.id}</td>
                                     <td>{studentlist.name}</td>
-                                    <td>{studentlist.email}</td>
-                                    <td>{studentlist.course}</td>
-                                    <td>{studentlist.status}</td>
+                                    <td>{studentlist.age}</td>
+                                    <td>{studentlist.address}</td>
+                                    <td>{studentlist.rollno}</td>
                                     <td><Button onClick={()=>props.handleedit(studentlist)}>edit</Button> 
                                     <Button onClick={()=>props.deletedata(studentlist)}>Delete</Button>
                                     </td>

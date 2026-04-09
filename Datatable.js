@@ -15,12 +15,12 @@ export default function Datatable (){
 
     const[id1,setId1]=useState('');
     const[name1,setName1]=useState('');
-    const[email1,setEmail1]=useState('');
-    const[course1,setCourse1]=useState('');
-    const[status1,setStatus1]=useState('');
+    const[age1,setAge1]=useState('');
+    const[address1,setAddress1]=useState('');
+    const[rollno1,setRollno1]=useState('');
 
     // const API = "https://nodeapi-1-jguo.onrender.com";
-    const API="http://localhost:8080";
+    const API="https://nodecode-1-a6dl.onrender.com";
     useEffect(()=>{
         getdata();
     },[])
@@ -33,7 +33,7 @@ export default function Datatable (){
     
     //get api
       function getdata(){
-        fetch(`${API}/getreact`)
+        fetch(`${API}/getsdata`)
         .then(response => response.json())
         .then(result => setList(result.data))
         .catch(error => console.error(error));
@@ -48,7 +48,7 @@ export default function Datatable (){
              headers:{ "Content-Type":"application/json"},
              body:'' 
         }
-        fetch(`${API}/deletereact/${item.id}`,optionapi)
+        fetch(`${API}/deletesdata/${item.name}`,optionapi)
             .then(response => response.json())
             .then(result => {console.log(result);
                 getdata(); })
@@ -62,13 +62,13 @@ export default function Datatable (){
         let item = {
           id:Number(id1),
           name: name1,
-          email:email1,
-          course:course1,
-          status:status1
+          age:age1,
+          address:address1,
+          rollno:rollno1
         }
         if(editdata)
         {
-            fetch(`${API}/putreact/${id1}`,{
+            fetch(`${API}/putsdata/${name1}`,{
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(item)
@@ -81,7 +81,7 @@ export default function Datatable (){
         }
         else 
         {
-            fetch(`${API}/postreact`,{
+            fetch(`${API}/postsdata`,{
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(item)
@@ -103,18 +103,18 @@ export default function Datatable (){
     function addstudent(){
         setId1("");
         setName1("");
-        setEmail1("");
-        setCourse1("");
-        setStatus1("");
+        setAge1("");
+        setAddress1("");
+        setRollno1("");
         setEditdata(false);
         setPanel(true);
     }
     function handleedit(studentlist){
         setId1(studentlist.id);
         setName1(studentlist.name);
-        setEmail1(studentlist.email);
-        setCourse1(studentlist.course);
-        setStatus1(studentlist.status);
+        setAge1(studentlist.age);
+        setAddress1(studentlist.address);
+        setRollno1(studentlist.rollno);
         setEditdata(true);
         setPanel(true);
     }
@@ -129,7 +129,7 @@ export default function Datatable (){
                         <Ctable lister={list} deletedata={deletedata} handleedit={handleedit}/>
                         
                         <div>
-                            <Cmodal panelor={panel} setPanel={setPanel} save={save} editdata={editdata} setId1={setId1} setName1={setName1} setEmail1={setEmail1} setCourse1={setCourse1} setStatus1={setStatus1} id1={id1} name1={name1} email1={email1} course1={course1} status1={status1} />
+                            <Cmodal panelor={panel} setPanel={setPanel} save={save} editdata={editdata} setId1={setId1} setName1={setName1} setAge1={setAge1} setAddress1={setAddress1} setRollno1={setRollno1} id1={id1} name1={name1} age1={age1} address1={address1} rollno1={rollno1} />
                         </div>
             </div>
         </div>
