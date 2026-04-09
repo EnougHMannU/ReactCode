@@ -1,0 +1,112 @@
+/* Outer container feel (table itself acts like a card) */
+.studentdata-table {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;          /* center in container */
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+/* Remove default bootstrap borders */
+.studentdata-table td,
+.studentdata-table th {
+  border: none !important;
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+/* Left column (labels) */
+.studentdata-table th {
+  width: 30%;
+  background: #f8f9fc;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Right column (inputs) */
+.studentdata-table td {
+  width: 70%;
+}
+
+/* Input styling */
+.studentdata-table input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.studentdata-table input::placeholder {
+  color: #aaa;
+}
+
+/* Focus effect */
+.studentdata-table input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+/* Button row */
+.studentdata-table tr:last-child th {
+  background: transparent;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Buttons */
+.studentdata-table button {
+  width: 120px;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Save button */
+.studentdata-table button:first-child {
+  background: linear-gradient(135deg, #6c63ff, #4a47d5);
+  border: none;
+}
+
+.studentdata-table button:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+}
+
+/* Cancel button */
+.studentdata-table button:last-child {
+  background: #f1f1f1;
+  color: #333;
+  border: none;
+}
+
+.studentdata-table button:last-child:hover {
+  background: #e0e0e0;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+  .studentdata-table {
+    max-width: 95%;
+  }
+
+  .studentdata-table th {
+    font-size: 13px;
+  }
+
+  .studentdata-table input {
+    font-size: 13px;
+  }
+
+  .studentdata-table button {
+    width: 100px;
+  }
+}

@@ -1,0 +1,198 @@
+/* Page background */
+body {
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container */
+.table-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Show Panel button */
+.show-panel-btn {
+  margin-bottom: 15px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.show-panel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Table styling */
+.datatable-table {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.datatable-table thead {
+  background: #343a40;
+  color: #ffffff;
+}
+
+.datatable-table th {
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.datatable-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Row hover effect */
+.datatable-table tbody tr:hover {
+  background-color: #f1f4ff;
+  transition: 0.2s;
+}
+
+/* Action buttons */
+.datatable-table button {
+  margin: 0 4px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Edit button */
+.datatable-table button:first-child {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.datatable-table button:first-child:hover {
+  background-color: #0b5ed7;
+}
+
+/* Save button */
+.datatable-table button:last-child {
+  background-color: #198754;
+  border: none;
+}
+
+.datatable-table button:last-child:hover {
+  background-color: #157347;
+}
+
+
+/* ===== Modal Custom Design ===== */
+
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: smoothPopup 0.3s ease-in-out;
+}
+
+@keyframes smoothPopup {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header Styling */
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+/* Body Styling */
+.modal-body {
+  padding-top: 10px;
+}
+
+/* Label Styling */
+.modal-body label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #555;
+  display: block;
+}
+
+/* Input Styling */
+.modal-body input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: 0.2s;
+  outline: none;
+}
+
+.modal-body input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+/* Footer Styling */
+.modal-footer {
+  border-top: none;
+}
+
+/* Buttons */
+.modal-footer button:first-child {
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-weight: 500;
+}
+
+.modal-footer button:last-child {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-weight: 500;
+}
+
+/* Add Student Button Styling */
+.show-panel-btn {
+  background: linear-gradient(135deg, #4CAF50, #2ecc71);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.show-panel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay Blur Effect */
+.modal-backdrop.show {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}

@@ -1,0 +1,76 @@
+/* .imglogo{
+    height:100px;
+    width:100px;
+}
+.custom-navbar {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  padding: 10px 0;
+} */
+.imglogo {
+  height: 60px;     /* standard navbar logo height */
+  width: auto;      /* image ka ratio maintain rahe */
+  object-fit: contain;
+}
+
+/* Navbar height ko balanced rakhe */
+.custom-navbar {
+  background-color: black;
+  padding: 8px 0;
+}
+
+/* Brand / Logo */
+.brand-text {
+  color: white !important;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.custom-navbar .nav-link {
+  color: white !important;
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.custom-navbar .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* Toggle icon color */
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.mybutton {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Hover Effect */
+.mybutton:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+  color:#ffd700;
+}
+
+/* Click Effect */
+.mybutton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
