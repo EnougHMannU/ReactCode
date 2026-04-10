@@ -4,9 +4,9 @@ import "./cssfiles/Datatable.css";
 // import Studentdata from './Studentdata.js';
 import { useState, useEffect} from "react";
 // import Modal from 'react-bootstrap/Modal';
-import Cmodal from './Cmodal';
+import Cmodal from './Smodal';
 // import ClassComponent from './ClassComponent.js';
-import Ctable from './Ctable';
+import Ctable from './Stable';
 
 export default function Datatable (){
     const[panel,setPanel]=useState(false)
