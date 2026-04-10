@@ -27,6 +27,7 @@ export default function Navbarr () {
               <Nav.Link as={Link} to="/login"><button className="mybutton">Login</button></Nav.Link>
               <Nav.Link as={Link} to="/sdatatable"><button className="mybutton">STUDENT DATA</button></Nav.Link>
               <Nav.Link as={Link} to="/cdatatable"><button className="mybutton">COURSE DATA</button></Nav.Link>
+              <Nav.Link as={Link} to="/tdatatable"><button className="mybutton">TEACHER DATA</button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
 

@@ -1,7 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function Cmodal(props){
+export default function Smodal(props){
     return(
         <div>
             <Modal show={props.panelor} onHide={() => props.setPanel(false)} centered>

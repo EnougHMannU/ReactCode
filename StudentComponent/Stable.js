@@ -1,6 +1,6 @@
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-export default function Ctable(props) {
+export default function Stable(props) {
     return(
         <>
         <Table className="datatable-table" striped bordered hover>

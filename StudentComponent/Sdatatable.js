@@ -1,6 +1,6 @@
 // import Table from 'react-bootstrap/Table';
 // import Button from 'react-bootstrap/Button';
-import "./cssfiles/Datatable.css";
+import "../cssfiles/Datatable.css";
 // import Studentdata from './Studentdata.js';
 import { useState, useEffect} from "react";
 // import Modal from 'react-bootstrap/Modal';
@@ -8,7 +8,7 @@ import Cmodal from './Smodal';
 // import ClassComponent from './ClassComponent.js';
 import Ctable from './Stable';
 
-export default function Datatable (){
+export default function Sdatatable (){
     const[panel,setPanel]=useState(false)
     const[list,setList]=useState([]);
     const[editdata,setEditdata]=useState(null);
@@ -124,7 +124,7 @@ export default function Datatable (){
         <div>
             
             <div className='table-container'>
-                <button onClick={addstudent} className="show-panel-btn">Add student</button>
+                <button onClick={addstudent} className="show-panel-btn">Add Student</button>
 
                         <Ctable lister={list} deletedata={deletedata} handleedit={handleedit}/>
                         
