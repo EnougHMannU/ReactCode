@@ -31,7 +31,7 @@ export default function Loginmodal(props) {
                     props.setIsLoggedIn(true); // 🔥 IMPORTANT
 
                     props.setLpanel(false);
-                    alert("Login Successfully");
+                    
                 } else {
                     alert("Invalid Username or Password ");
                 }
