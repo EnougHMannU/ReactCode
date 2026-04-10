@@ -2,47 +2,52 @@
 .login-header {
     border-bottom: none;
     text-align: center;
+    padding-top: 15px;
 }
 
 .login-title {
     width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 0.5px;
 }
 
 /* Body */
 .login-body {
-    padding: 20px;
+    padding: 25px;
 }
 
 /* Input Group */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     display: flex;
     flex-direction: column;
 }
 
 /* Labels */
 .input-group label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #555;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #666;
+    font-weight: 500;
 }
 
 /* Inputs */
 .input-group input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     outline: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    font-size: 14px;
 }
 
 /* Focus Effect */
 .input-group input:focus {
     border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0,123,255,0.4);
+    box-shadow: 0 0 8px rgba(0,123,255,0.4);
+    transform: scale(1.02);
 }
 
 /* Footer */
@@ -50,26 +55,83 @@
     border-top: none;
     display: flex;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
-/* Button */
+/* Main Button */
 .login-btn {
     width: 100%;
-    padding: 10px;
-    border-radius: 8px !important;
+    padding: 11px;
+    border-radius: 10px !important;
     background: linear-gradient(135deg, #007bff, #0056b3) !important;
     border: none !important;
     font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 /* Button Hover */
 .login-btn:hover {
     background: linear-gradient(135deg, #0056b3, #003d80) !important;
-    transform: scale(1.03);
+    transform: scale(1.05);
+}
+
+/* Register Button (same style but green tone) */
+.register-btn {
+    width: 100%;
+    padding: 11px;
+    border-radius: 10px !important;
+    background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+    border: none !important;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #1e7e34, #145c26) !important;
+    transform: scale(1.05);
+}
+
+/* Toggle Text (New user / Already user) */
+.toggle-text {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Link Button */
+.link-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.link-btn:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* Modal Box */
 .modal-content {
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

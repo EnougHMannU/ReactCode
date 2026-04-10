@@ -1,76 +1,114 @@
-/* .imglogo{
-    height:100px;
-    width:100px;
-}
-.custom-navbar {
-  background-color: black;
-  background-size: cover;
-  background-position: center;
-  padding: 10px 0;
-} */
+/* 🔥 LOGO */
 .imglogo {
-  height: 60px;     /* standard navbar logo height */
-  width: auto;      /* image ka ratio maintain rahe */
+  height: 60px;
+  width: auto;
   object-fit: contain;
 }
 
-/* Navbar height ko balanced rakhe */
+/* 🔥 NAVBAR (Luxury Dark Gradient) */
 .custom-navbar {
-  background-color: black;
-  padding: 8px 0;
+  background: linear-gradient(135deg, #000000, #0f172a);
+  padding: 10px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Brand / Logo */
+/* 🔥 BRAND TEXT */
 .brand-text {
-  color: white !important;
+  color: #ffffff !important;
   font-size: 22px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* Nav links */
+/* 🔥 NAV LINKS */
 .custom-navbar .nav-link {
-  color: white !important;
-  margin-left: 15px;
-  font-size: 16px;
+  color: #e5e5e5 !important;
+  margin-left: 12px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
 }
 
-/* Hover effect */
+/* Hover effect for links */
 .custom-navbar .nav-link:hover {
   color: #ffd700 !important;
 }
 
-/* Toggle icon color */
+/* 🔥 TOGGLE BUTTON */
 .navbar-toggler {
-  border-color: white;
+  border-color: #ffffff;
 }
 
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
+/* ========================================= */
+/* 💎 PREMIUM LUXURY BUTTON */
+/* ========================================= */
+
 .mybutton {
-  padding: 6px 12px;
-  border-radius: 10px;
-  border: none;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: #ffffff;
-  font-size: 16px;
+  padding: 7px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+
+  color: #f5f5f5;
+  font-size: 15px;
   font-weight: 600;
+  letter-spacing: 0.5px;
+
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+  transition: all 0.35s ease;
+
+  /* Shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-/* Hover Effect */
+/* ✨ HOVER = GOLD LUXURY EFFECT */
 .mybutton:hover {
-  background: linear-gradient(135deg, #1e40af, #1e3a8a);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
-  color:#ffd700;
+  color: #ffd700;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(255, 215, 0, 0.05)
+  );
+
+  border: 1px solid #ffd700;
+
+  transform: translateY(-3px) scale(1.04);
+
+  box-shadow:
+    0 8px 25px rgba(255, 215, 0, 0.3),
+    0 0 12px rgba(255, 215, 0, 0.5);
 }
 
-/* Click Effect */
+/* 💥 CLICK EFFECT */
 .mybutton:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================= */
+/* 🌟 EXTRA TOUCHES */
+/* ========================================= */
+
+/* Smooth underline animation on hover */
+.custom-navbar .nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ffd700;
+  transition: width 0.3s;
+  margin-top: 3px;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
 }

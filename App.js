@@ -6,41 +6,62 @@ import { useEffect, useState } from 'react';
 import Home from './Home';
 import Aboutus from './Aboutus';
 import Contact from './Contact';
-import Login from './Login';
 import Sdatatable from './StudentComponent/Sdatatable.js';
 import Cdatatable from './CourseComponent/Cdatatable.js';
 import Tdatatable from './TeacherComponent/Tdatatable.js';
 import Loginmodal from './Loginmodal.js';
-// import Studentnew from './Studentnew.js';
-// import { useState } from "react";
-
-
-
-
 
 export default function App() {
-const[lpanel,setLpanel]=useState(false);  
+
+  const [lpanel, setLpanel] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    setLpanel(true);
+    const token = sessionStorage.getItem("token");
+
+    if (token) {
+      setIsLoggedIn(true);
+      setLpanel(false);
+    } else {
+      setIsLoggedIn(false);
+      setLpanel(true); // force login
+    }
   }, []);
 
   return (
-     <BrowserRouter>
-     <Navbarr/>
-      <Loginmodal panelor={lpanel} setLpanel={setLpanel}/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<Aboutus />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sdatatable" element={<Sdatatable/>} className=""/>
-        <Route path="/cdatatable" element={<Cdatatable/>} className=""/>
-        <Route path="/tdatatable" element={<Tdatatable/>} className=""/>
-      </Routes>
+    <BrowserRouter>
 
-      <Footer />
+      <Navbarr 
+        openLogin={() => setLpanel(true)} 
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
+
+      <Loginmodal 
+        panelor={lpanel} 
+        setLpanel={setLpanel}
+        setIsLoggedIn={setIsLoggedIn}
+      />
+
+      {/* ✅ Protected Routes */}
+      {
+        isLoggedIn && (
+          <>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<Aboutus />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/sdatatable" element={<Sdatatable/>}/>
+              <Route path="/cdatatable" element={<Cdatatable/>}/>
+              <Route path="/tdatatable" element={<Tdatatable/>}/>
+            </Routes>
+
+            <Footer />
+          </>
+        )
+      }
+
     </BrowserRouter>
   );
 }
